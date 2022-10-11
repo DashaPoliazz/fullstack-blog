@@ -1,6 +1,7 @@
-const { Schema, mongoose } = require("mongoose");
+// const { Schema, mongoose } = require("mongoose");
+import { Schema, mongoose } from "mongoose";
 
-export const UserSchema = new Schema(
+const UserSchema = new Schema(
   {
     fullName: {
       type: String,

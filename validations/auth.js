@@ -1,9 +1,12 @@
-const { body } = require("express-validator");
+// const { body } = require("express-validator");
+import { body } from "express-validator";
 
-const registerValidation = [
-  body("email").isEmail(),
-  body("password").isLength({ min: 6 }),
-  body("fullName").isLength({ min: 3 }),
+export const registerValidation = [
+  body("email", "Invalid email format").isEmail(),
+  body("password", "Password length should be more than 6 chars").isLength({
+    min: 6,
+  }),
+  body("fullName", "Fullname should be more than 3 chars").isLength({ min: 3 }),
 ];
 
-module.exports = { registerValidation };
+// module.exports = { registerValidation };
