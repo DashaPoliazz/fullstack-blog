@@ -1,4 +1,3 @@
-// const { body } = require("express-validator");
 import { body } from "express-validator";
 
 export const registerValidation = [
@@ -8,5 +7,3 @@ export const registerValidation = [
   }),
   body("fullName", "Fullname should be more than 3 chars").isLength({ min: 3 }),
 ];
-
-// module.exports = { registerValidation };
